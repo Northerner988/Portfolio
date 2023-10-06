@@ -1,0 +1,115 @@
+:root {
+  --bg: #ececec;
+  --link-color: #e4e3db;
+  --overlay-bg: #1d1d1d;
+  --ff-primary: "Aeonik", sans-serif;
+  --blue: #005fff;
+  --orange: #ff6d1b;
+  --red: #e80f00;
+  --pink: #ff95f8;
+  --green: #00ff00;
+  --purple: #7b7dff;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #eddede;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--overlay-bg);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #1d1d1d;
+  overflow-x: hidden;
+  font-family: var(--ff-primary);
+  background-color: var(--bg);
+}
+
+.container {
+  --max-width: 108rem;
+  width: min(var(--max-width), 100% - 2rem);
+  margin: auto;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+.header__wrapper {
+  background-color: #005fff;
+}
